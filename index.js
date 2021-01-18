@@ -1,11 +1,11 @@
 var Car = /** @class */ (function () {
-    function Car() {
-        this.carBrand = "Tesla";
-        this.carModel = "model 3";
-        this.engine = "battery";
-        this.topSpeed = 160;
-        this.milage = 500;
-        this.noOfDoors = "SEVEN";
+    function Car(barndValue, modelValue, engineValue, speedValue, milageValue, doorsValue) {
+        this.carBrand = barndValue;
+        this.carModel = modelValue;
+        this.engine = engineValue;
+        this.topSpeed = speedValue;
+        this.milage = milageValue;
+        this.noOfDoors = doorsValue;
     }
     Car.prototype.carStart = function () {
         console.log("Car Started");
@@ -30,7 +30,7 @@ var Car = /** @class */ (function () {
     };
     return Car;
 }());
-var c = new Car();
+var c = new Car("Tesla", "model 3", "battery", 160, 500, "SEVEN");
 c.carStart();
 c.carAccelerate();
 c.carLightsON();

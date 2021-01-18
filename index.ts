@@ -1,10 +1,19 @@
 class Car{
-    carBrand:string = "Tesla"
-    carModel:string = "model 3"
-    engine:string = "battery"
-    topSpeed:number = 160
-    milage:number = 500
-    noOfDoors:string = "SEVEN"
+    carBrand:string
+    carModel:string 
+    engine:string 
+    topSpeed:number 
+    milage:number 
+    noOfDoors:string
+
+    constructor(barndValue:string,modelValue:string,engineValue:string,speedValue:number,milageValue:number,doorsValue:string){
+        this.carBrand = barndValue
+        this.carModel = modelValue
+        this.engine = engineValue
+        this.topSpeed = speedValue
+        this.milage = milageValue
+        this.noOfDoors = doorsValue
+    }
 
     carStart(){
         console.log("Car Started")
@@ -29,7 +38,7 @@ class Car{
     }
 }
 
-let c = new Car()
+let c = new Car("Tesla","model 3","battery",160,500,"SEVEN")
 c.carStart()
 c.carAccelerate()
 c.carLightsON()
