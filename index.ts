@@ -1,10 +1,10 @@
 class Car{
-    carBrand:string
-    carModel:string
-    engine:string
-    topSpeed:number
-    milage:number
-    noOfDoors:string
+    carBrand:string = "Tesla"
+    carModel:string = "model 3"
+    engine:string = "battery"
+    topSpeed:number = 160
+    milage:number = 500
+    noOfDoors:string = "SEVEN"
 
     carStart(){
         console.log("Car Started")
@@ -24,8 +24,8 @@ class Car{
     carOFF(){
         console.log("Car Stopped")
     }
-    getData(carBrand:string,carModel:string,engine:string,topSpeed:number,milage:number,noOfDoors:string){
-        console.log(carBrand,carModel,engine,topSpeed,milage,noOfDoors)
+    getData(){
+        console.log(this.carBrand,this.carModel,this.engine,this.topSpeed,this.milage,this.noOfDoors)
     }
 }
 
@@ -36,4 +36,4 @@ c.carLightsON()
 c.carMove()
 c.carHorn()
 c.carOFF()
-c.getData("Tesla","model 3","battery",160,500,"SEVEN")
+c.getData()
