@@ -26,12 +26,11 @@ var Car = /** @class */ (function () {
         console.log("Car Stopped");
     };
     Car.prototype.getData = function (car) {
-        console.log(car.carBrand, car.carModel, car.engine, car.topSpeed, car.milage, car.noOfDoors);
+        console.log(car.barndValue, car.modelValue, car.engineValue, car.speedValue, car.milageValue, car.doorsValue);
     };
     return Car;
 }());
 var obj = { barndValue: "Tesla", modelValue: "model 3", engineValue: "battery", speedValue: 160, milageValue: 500, doorsValue: "SIX" };
-var obj1 = { carBrand: "Tesla", carModel: "model 3", engine: "battery", topSpeed: 160, milage: 500, noOfDoors: "SIX" };
 var car = new Car(obj);
 car.carStart();
 car.carAccelerate();
@@ -39,4 +38,4 @@ car.carLightsON();
 car.carMove();
 car.carHorn();
 car.carOFF();
-car.getData(obj1);
+car.getData(obj);
