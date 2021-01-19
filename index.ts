@@ -9,13 +9,22 @@ class Car{
     milage:number 
     noOfDoors:doorType
 
-    constructor(barndValue:string,modelValue:string,engineValue:string,speedValue:number,milageValue:number,doorsValue:doorType){
-        this.carBrand = barndValue
-        this.carModel = modelValue
-        this.engine = engineValue
-        this.topSpeed = speedValue
-        this.milage = milageValue
-        this.noOfDoors = doorsValue
+    constructor(
+        CarData:{
+            barndValue:string,
+            modelValue:string,
+            engineValue:string,
+            speedValue:number,
+            milageValue:number,
+            doorsValue:doorType
+        }
+    ){
+        this.carBrand = CarData.barndValue
+        this.carModel = CarData.modelValue
+        this.engine = CarData.engineValue
+        this.topSpeed = CarData.speedValue
+        this.milage = CarData.milageValue
+        this.noOfDoors = CarData.doorsValue
     }
 
     carStart(){
@@ -36,16 +45,34 @@ class Car{
     carOFF(){
         console.log("Car Stopped")
     }
-    getData(carBrand:string,carModel:string,engine:string,topSpeed:number,milage:number,noOfDoors:doorType){
-        console.log(carBrand, carModel, engine, topSpeed, milage,noOfDoors )
+    getData(car:{carBrand:string,carModel:string,engine:string,topSpeed:number,milage:number,noOfDoors:doorType}){
+        console.log(car.carBrand, car.carModel, car.engine, car.topSpeed, car.milage,car.noOfDoors )
     }
 }
 
-let car = new Car("Tesla","model 3","battery",160,500,"SIX")
+let obj:{
+    barndValue:string,
+    modelValue:string,
+    engineValue:string,
+    speedValue:number,
+    milageValue:number,
+    doorsValue:doorType
+} = {barndValue:"Tesla",modelValue:"model 3",engineValue:"battery",speedValue:160,milageValue:500,doorsValue:"SIX"}
+
+let obj1:{
+    carBrand:string,
+    carModel:string,
+    engine:string,
+    topSpeed:number,
+    milage:number,
+    noOfDoors:doorType
+} = {carBrand:"Tesla",carModel:"model 3",engine:"battery",topSpeed:160,milage:500,noOfDoors:"SIX"}
+
+let car = new Car(obj)
 car.carStart()
 car.carAccelerate()
 car.carLightsON()
 car.carMove()
 car.carHorn()
 car.carOFF()
-car.getData("Tesla","model 3","battery",160,500,"SIX")
+car.getData(obj1)
