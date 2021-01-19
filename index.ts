@@ -1,12 +1,15 @@
+
+type doorType =  "ONE" | "TWO" | "THREE" | "FOUR" | "FIVE" | "SIX" | 1 | 2 | 3 | 4 | 5 | 6;
+
 class Car{
     carBrand:string
     carModel:string 
     engine:string 
     topSpeed:number 
     milage:number 
-    noOfDoors:string
+    noOfDoors:doorType
 
-    constructor(barndValue:string,modelValue:string,engineValue:string,speedValue:number,milageValue:number,doorsValue:string){
+    constructor(barndValue:string,modelValue:string,engineValue:string,speedValue:number,milageValue:number,doorsValue:doorType){
         this.carBrand = barndValue
         this.carModel = modelValue
         this.engine = engineValue
@@ -33,16 +36,16 @@ class Car{
     carOFF(){
         console.log("Car Stopped")
     }
-    getData(){
-        console.log(this.carBrand,this.carModel,this.engine,this.topSpeed,this.milage,this.noOfDoors)
+    getData(carBrand:string,carModel:string,engine:string,topSpeed:number,milage:number,noOfDoors:doorType){
+        console.log(carBrand, carModel, engine, topSpeed, milage,noOfDoors )
     }
 }
 
-let c = new Car("Tesla","model 3","battery",160,500,"SEVEN")
-c.carStart()
-c.carAccelerate()
-c.carLightsON()
-c.carMove()
-c.carHorn()
-c.carOFF()
-c.getData()
+let car = new Car("Tesla","model 3","battery",160,500,"SIX")
+car.carStart()
+car.carAccelerate()
+car.carLightsON()
+car.carMove()
+car.carHorn()
+car.carOFF()
+car.getData("Tesla","model 3","battery",160,500,"SIX")
