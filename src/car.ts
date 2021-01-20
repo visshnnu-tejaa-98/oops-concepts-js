@@ -24,7 +24,7 @@ export default class Car extends Engine{
         console.log(this.carBrand,this.carModel,this.engine,this.topSpeed,this.milage,this.noOfDoors )
     }
 
-    getEnfineData(){
-        console.log(this.getEngineDetails)
+    getEngineData(){
+        console.log(this.fuelType,this.rpm,this.torque,this.cylinders)
     }
 }

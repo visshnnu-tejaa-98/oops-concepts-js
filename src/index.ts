@@ -20,3 +20,4 @@ let engineObj = {
 let car = new Car(carObj,engineObj)
 
 car.getData()
+car.getEngineData()

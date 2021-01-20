@@ -14,8 +14,8 @@ export default class Engine{
 
     }
 
-    getEngineDetails(){
-        return `${this.fuelType} ${this.rpm} ${this.torque} ${this.cylinders}`
-    }
+    // getEngineDetails(){
+    //     return `${this.fuelType}, ${this.rpm}, ${this.torque}, ${this.cylinders}`
+    // }
 
 }
