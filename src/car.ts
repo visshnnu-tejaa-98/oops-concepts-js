@@ -1,6 +1,8 @@
 import carConfiguration from "./carConfiguration"
+import Engine from "./engine"
+import engineConfiguration from "./engineConfiguration"
 
-export default class Car{
+export default class Car extends Engine{
     carBrand:string
     carModel:string 
     engine:string 
@@ -8,7 +10,8 @@ export default class Car{
     milage:number 
     noOfDoors:string
 
-    constructor(CarData:carConfiguration){
+    constructor(CarData:carConfiguration, engineData:engineConfiguration){
+        super(engineData)
         this.carBrand = CarData.barndValue
         this.carModel = CarData.modelValue
         this.engine = CarData.engineValue
@@ -17,7 +20,11 @@ export default class Car{
         this.noOfDoors = CarData.doorsValue
     }
 
-    getData(car:carConfiguration){
-        console.log(car.barndValue, car.modelValue, car.engineValue, car.speedValue, car.milageValue,car.doorsValue )
+    getData(){
+        console.log(this.carBrand,this.carModel,this.engine,this.topSpeed,this.milage,this.noOfDoors )
+    }
+
+    getEnfineData(){
+        console.log(this.getEngineDetails)
     }
 }
